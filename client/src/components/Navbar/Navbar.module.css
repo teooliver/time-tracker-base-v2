@@ -69,6 +69,7 @@
 }
 
 .btn-navbar--add {
+  composes: btn-navbar;
   background-color: var(--btn-primary);
 }
 

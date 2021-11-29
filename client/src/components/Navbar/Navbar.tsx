@@ -113,10 +113,7 @@ const Navbar = () => {
         </li>
       </ul>
       <div className={styles['seed-buttons']}>
-        <button
-          className={`${styles['btn-navbar']} ${styles['btn-navbar--add']}`}
-          onClick={handleSeedData}
-        >
+        <button className={styles['btn-navbar--add']} onClick={handleSeedData}>
           Seed Data
         </button>
         <button

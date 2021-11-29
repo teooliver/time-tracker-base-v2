@@ -25,12 +25,15 @@ li:first-child {
   height: 3rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
 
-  /* @include up-to-tablet {
+@media (max-width: 1024px) {
+  .list-item {
     height: 4.5rem;
     align-items: baseline;
-  } */
+  }
 }
+
 .list-item:hover {
   background-color: var(--item-hover-brackground);
 }
@@ -40,17 +43,21 @@ li:first-child {
 
 .task {
   margin-right: auto;
-  /* @include up-to-tablet {
+}
+
+@media (max-width: 1024px) {
+  .task {
     display: flex;
     flex-direction: column;
-    span {
-      display: inline-block;
-    }
+  }
 
-    .project {
-      margin: 0.5rem 0;
-    }
-  } */
+  .task span {
+    display: inline-block;
+  }
+
+  .task .project {
+    margin: 0.5rem 0;
+  }
 }
 
 .task-name {
@@ -94,11 +101,14 @@ li:first-child {
   padding-left: 0.5rem;
   border-radius: 0.8rem;
   white-space: nowrap;
-
-  /* @include up-to-tablet {
-    padding-bottom: 3rem;
-  } */
 }
+
+@media (max-width: 1024px) {
+  .rigth-side {
+    padding-bottom: 3rem;
+  }
+}
+
 .rigth-side span {
   display: inline-block;
 }

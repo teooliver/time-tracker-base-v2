@@ -9,6 +9,7 @@ import CustomDatePickerInput from '../EventsTable/CustomDatePickerInput';
 import { useDeleteTask } from '../../../hooks/useDeleteTask';
 import { useUpdateTask } from '../../../hooks/useUpdateTask';
 import '@reach/menu-button/styles.css';
+import styles from './EventRow.module.css';
 
 interface Props {
   task: IDbTask;
@@ -39,10 +40,13 @@ const EventRow: FC<Props> = ({ task }) => {
 
   return (
     <>
-      <li className='list-item'>
-        <div className='task'>
-          <span className='task-name'> {task.name}</span>
-          <span className='project' style={{ color: task.project_color }}>
+      <li className={styles['list-item']}>
+        <div className={styles['task']}>
+          <span className={styles['task-name']}> {task.name}</span>
+          <span
+            className={styles['project']}
+            style={{ color: task.project_color }}
+          >
             {task.project ? (
               <>
                 <Dot />
@@ -56,8 +60,8 @@ const EventRow: FC<Props> = ({ task }) => {
             )}
           </span>
         </div>
-        <div className='rigth-side'>
-          <span className='date-picker'>
+        <div className={styles['rigth-side']}>
+          <span className={styles['date-picker']}>
             <DatePicker
               selected={task.initial_time ? new Date(task.initial_time) : null}
               // @ts-ignore
@@ -69,7 +73,7 @@ const EventRow: FC<Props> = ({ task }) => {
             />
           </span>
           <span>-</span>
-          <span className='date-picker'>
+          <span className={styles['date-picker']}>
             <DatePicker
               selected={task.end_time ? new Date(task.end_time) : null}
               // @ts-ignore
@@ -80,10 +84,10 @@ const EventRow: FC<Props> = ({ task }) => {
               customInput={<CustomDatePickerInput />}
             />
           </span>
-          <span className='total'>
+          <span className={styles['total']}>
             {hours}:{minutes}:{seconds}
           </span>
-          <span className='menu'>
+          <span className={styles['menu']}>
             <Menu>
               <MenuButton>
                 <ThreeDotsVertical />

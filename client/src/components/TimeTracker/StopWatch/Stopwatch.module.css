@@ -4,72 +4,12 @@
   padding: 1rem;
 }
 
-.Stopwatch .task-project-input {
+.task-project-input {
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid grey;
   padding-bottom: 0.2rem;
   margin-bottom: 0.5rem;
-}
-
-/* .EditableInput {
-  flex-grow: 2;
-}
-.project-select {
-  flex-grow: 1;
-} */
-
-.project-select {
-  position: relative;
-  margin-left: 1rem;
-  min-height: fit-content;
-}
-
-.select-project-icon {
-  display: flex;
-  gap: 0.4rem;
-  flex-direction: row;
-  align-items: center;
-  font-weight: 600;
-  color: white;
-  padding: 0.4rem;
-  border-radius: 0.2rem;
-}
-
-.select-project-icon:hover {
-  cursor: pointer;
-  border: 1px solid white;
-}
-
-.selected-project {
-  background-color: var(--accent);
-  padding: 0.2rem 0.8rem;
-  padding-left: 0.2rem;
-  border-radius: 0.4rem;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-.selected-project-name {
-  margin-right: 0.4rem;
-  color: var(--white);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: none;
-  white-space: nowrap;
-}
-
-.selected-project-client {
-  margin-right: 0.4rem;
-  color: var(--gray);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: none;
-  white-space: nowrap;
 }
 
 .clock-controls {
@@ -79,3 +19,10 @@
   margin-left: auto;
   justify-content: flex-end;
 }
+
+/* .EditableInput {
+  flex-grow: 2;
+}
+.project-select {
+  flex-grow: 1;
+} */

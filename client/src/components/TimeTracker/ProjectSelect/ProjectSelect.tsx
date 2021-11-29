@@ -3,6 +3,7 @@ import { Dot } from '../../icons/Dot';
 import { Folder } from '../../icons/Folder';
 import ProjectsDropDown from '../../ProjectsDropdown/ProjectsDropDown';
 import { ISelectedProject } from '../StopWatch/Stopwatch';
+import styles from './ProjectSelect.module.css';
 
 interface Props {
   selectedProject: ISelectedProject;
@@ -16,18 +17,20 @@ export const ProjectSelect: FC<Props> = ({
   const [isProjectDropwdownOpen, setIsProjectDropwdownOpen] = useState(false);
 
   return (
-    <div className='project-select'>
+    <div className={styles['project-select']}>
       {selectedProject.name ? (
         <span
-          className='selected-project'
+          className={styles['selected-project']}
           onClick={() => setIsProjectDropwdownOpen(!isProjectDropwdownOpen)}
         >
           <i>
             <Dot size='24' />
           </i>
-          <span className='selected-project-name'>{selectedProject.name}</span>
+          <span className={styles['selected-project-name']}>
+            {selectedProject.name}
+          </span>
           <span
-            className='selected-project-client'
+            className={styles['selected-project-client']}
             style={{ color: selectedProject.color }}
           >
             {selectedProject.client ? `- ${selectedProject.client}` : null}
@@ -35,7 +38,7 @@ export const ProjectSelect: FC<Props> = ({
         </span>
       ) : (
         <span
-          className='select-project-icon'
+          className={styles['select-project-icon']}
           onClick={() => setIsProjectDropwdownOpen(!isProjectDropwdownOpen)}
         >
           <Folder size='24' color='white' />

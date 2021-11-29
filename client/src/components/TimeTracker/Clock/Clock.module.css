@@ -1,0 +1,17 @@
+.clock {
+  color: #ccc;
+  display: flex;
+  letter-spacing: 2px;
+  font-size: 5rem;
+}
+
+.clock span {
+  position: relative;
+  top: 2px;
+  font-size: 2rem;
+}
+
+.clock .time-text {
+  font-size: 2.5rem;
+  margin: 0;
+}

@@ -4,6 +4,7 @@ import EditableInput from '../EditableInput/EditableInput';
 import { ProjectSelect } from '../ProjectSelect/ProjectSelect';
 import { Clock } from '../Clock/Clock';
 import { ClockControls } from '../ClockControls/ClockControls';
+import styles from './Stopwatch.module.css';
 
 export interface ISelectedProject {
   id: string;
@@ -29,8 +30,8 @@ const Stopwatch = () => {
 
   return (
     <header className='header'>
-      <div className='Stopwatch'>
-        <div className='task-project-input'>
+      <div className={styles['Stopwatch']}>
+        <div className={styles['task-project-input']}>
           <EditableInput />
 
           <ProjectSelect
@@ -38,8 +39,9 @@ const Stopwatch = () => {
             setSelectedProject={setSelectedProject}
           />
         </div>
-        <div className='clock-controls'>
+        <div className={styles['clock-controls']}>
           <Clock timerArray={timerArray} />
+
           <ClockControls
             setTimeInSeconds={setTimeInSeconds}
             timeInSeconds={timeInSeconds}

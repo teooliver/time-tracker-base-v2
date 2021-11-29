@@ -5,7 +5,7 @@ import { IDbTask } from '../../../interfaces/task';
 import { calculateTimer } from '../../../utils/timer';
 import { ThreeDotsVertical } from '../../icons/ThreeDotsVertical';
 import DatePicker from 'react-datepicker';
-import CustomDatePickerInput from './CustomDatePickerInput';
+import CustomDatePickerInput from '../EventsTable/CustomDatePickerInput';
 import { useDeleteTask } from '../../../hooks/useDeleteTask';
 import { useUpdateTask } from '../../../hooks/useUpdateTask';
 import '@reach/menu-button/styles.css';

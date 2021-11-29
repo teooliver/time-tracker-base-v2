@@ -5,6 +5,7 @@ import { PlayCircle } from '../../icons/PlayCircle';
 import { StopCircle } from '../../icons/StopCircle';
 import { XCircle } from '../../icons/XCircle';
 import { ISelectedProject } from '../StopWatch/Stopwatch';
+import styles from './ClockControls.module.css';
 
 interface ControlsProps {
   setTimeInSeconds: Function;
@@ -50,18 +51,18 @@ export const ClockControls: FC<ControlsProps> = ({
   };
 
   return (
-    <div className='Controls'>
+    <div className={styles.Controls}>
       {isPlaying ? (
         <button onClick={handleStopButton}>
-          <StopCircle className='stop-btn' size='32' />
+          <StopCircle className={styles['stop-btn']} size='32' />
         </button>
       ) : (
         <button onClick={handlePlayButton}>
-          <PlayCircle className='play-btn' size='32' />
+          <PlayCircle className={styles['play-btn']} size='32' />
         </button>
       )}
       <button onClick={handleResetButton}>
-        <XCircle className='reset-btn' size='32' />
+        <XCircle className={styles['reset-btn']} size='32' />
       </button>
     </div>
   );

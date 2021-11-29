@@ -1,6 +1,6 @@
 import format from 'date-fns/format';
 import { calculateTimer } from '../../../utils/timer';
-import EventRow from './EventRow';
+import EventRow from '../EventsRow/EventRow';
 import { useGetGroupedTasks } from '../../../hooks/useGetGroupedTasks';
 
 const EventsTable = () => {

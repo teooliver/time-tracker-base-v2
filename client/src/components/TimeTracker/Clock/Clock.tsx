@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import styles from './Clock.module.css';
 
 export interface ClockProps {
   timerArray: (string | number)[];
@@ -6,12 +7,12 @@ export interface ClockProps {
 
 export const Clock: FC<ClockProps> = ({ timerArray }) => {
   return (
-    <section className='clock'>
-      <p className='time-text'>{timerArray[0]}</p>
+    <section className={styles['clock']}>
+      <p className={styles['time-text']}>{timerArray[0]}</p>
       <span>:</span>
-      <p className='time-text'>{timerArray[1]}</p>
+      <p className={styles['time-text']}>{timerArray[1]}</p>
       <span>:</span>
-      <p className='time-text'>{timerArray[2]}</p>
+      <p className={styles['time-text']}>{timerArray[2]}</p>
     </section>
   );
 };

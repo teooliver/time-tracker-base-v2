@@ -1,4 +1,4 @@
-import { AppRoutes } from './AppRoutes';
+import { AppRoutes } from './components/AppRoutes/AppRoutes';
 import Navbar from './components/Navbar/Navbar';
 import './styles/reset.css';
 import './styles/variables.css';

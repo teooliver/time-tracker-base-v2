@@ -1,0 +1,4 @@
+.AppRoutes {
+  margin-left: var(--side-nav-bar-width);
+  min-width: var(--min-app-width);
+}

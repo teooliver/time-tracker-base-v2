@@ -1,5 +1,6 @@
-import React, { FC, useContext, useState } from 'react';
+import { FC, useContext, useState } from 'react';
 import { TaskContext } from '../../../context/TaskContext';
+import styles from './EditableInput.module.css';
 
 interface EditableInputProps {
   // eventName: string;
@@ -17,11 +18,11 @@ const EditableInput: FC<EditableInputProps> = () => {
   };
 
   return (
-    <div className='EditableInput'>
+    <div className={styles['EditableInput']}>
       {isEditing ? (
         <input
           autoFocus
-          className='event-name-input'
+          className={styles['event-name-input']}
           type='text'
           value={task.name}
           placeholder='What are you working on?'
@@ -31,7 +32,10 @@ const EditableInput: FC<EditableInputProps> = () => {
         />
       ) : (
         // Todo: hover::cursor: text;
-        <p className='event-name-input' onClick={() => setIsEditing(true)}>
+        <p
+          className={styles['event-name-input']}
+          onClick={() => setIsEditing(true)}
+        >
           {task?.name ? task.name : 'What are you working on?'}
         </p>
       )}

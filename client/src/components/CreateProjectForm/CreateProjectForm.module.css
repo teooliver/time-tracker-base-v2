@@ -1,0 +1,31 @@
+.ProjectsForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.ProjectsForm input {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.2rem 0.2rem;
+  border: 1px solid var(--gray);
+  border-radius: 0.2rem;
+}
+
+.ProjectsForm button {
+  color: white;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  font-weight: bold;
+}
+
+.project-color {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: blue;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ProjectCreate, useCreateProject } from '../../hooks/useCreateProject';
 import ClientsDropdown from '../ClientsDropdown/ClientsDropdown';
+import styles from './CreateProjectForm.module.css';
 
 const CreateProjectForm = () => {
   const [name, setName] = useState('');
@@ -28,7 +29,7 @@ const CreateProjectForm = () => {
   };
 
   return (
-    <form className='ProjectsForm' onSubmit={(e) => handleSubmit(e)}>
+    <form className={styles.ProjectsForm} onSubmit={(e) => handleSubmit(e)}>
       <div>
         <input
           placeholder='Project Name'
@@ -38,7 +39,7 @@ const CreateProjectForm = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <span className='project-color'></span>
+        <span className={styles['project-color']}></span>
       </div>
       <ClientsDropdown client={client} setClient={setClient} />
       <input
@@ -49,7 +50,10 @@ const CreateProjectForm = () => {
         value={workspace}
         onChange={(e) => setWorkspace(e.target.value)}
       />
-      <button className='btn btn-primary' onClick={handleCreateProject}>
+      <button
+        className={`${styles['btn']} ${styles['btn-primary']}`}
+        onClick={handleCreateProject}
+      >
         Create Project
       </button>
     </form>

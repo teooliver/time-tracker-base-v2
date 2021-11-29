@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import TaskProvider from './context/TaskContext';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { BrowserRouter } from 'react-router-dom';
+import 'react-datepicker/dist/react-datepicker.css';
+import '@reach/listbox/styles.css';
+import '@reach/dialog/styles.css';
+// import './styles/styles.scss';
+
+const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <TaskProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </TaskProvider>
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

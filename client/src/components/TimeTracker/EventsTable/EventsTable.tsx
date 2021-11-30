@@ -2,6 +2,7 @@ import format from 'date-fns/format';
 import { calculateTimer } from '../../../utils/timer';
 import EventRow from '../EventsRow/EventRow';
 import { useGetGroupedTasks } from '../../../hooks/useGetGroupedTasks';
+import styles from './EventsTable.module.css';
 
 const EventsTable = () => {
   const {
@@ -21,10 +22,10 @@ const EventsTable = () => {
             Math.round(group.total_time)
           );
           return (
-            <ul className='EventsTable' key={group._id}>
-              <li className='date-header'>
+            <ul className={styles['EventsTable']} key={group._id}>
+              <li className={styles['date-header']}>
                 <span>{format(new Date(group._id), 'EEE, dd LLL')}</span>
-                <span className='day-total'>
+                <span className={styles['day-total']}>
                   {hours}:{minutes}:{seconds}
                 </span>
               </li>

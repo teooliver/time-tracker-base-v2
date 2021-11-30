@@ -32,12 +32,15 @@ const Stopwatch = () => {
     <header className='header'>
       <div className={styles['Stopwatch']}>
         <div className={styles['task-project-input']}>
-          <EditableInput />
-
-          <ProjectSelect
-            selectedProject={selectedProject}
-            setSelectedProject={setSelectedProject}
-          />
+          <span className={styles['editable-input']}>
+            <EditableInput />
+          </span>
+          <span className={styles['project-select']}>
+            <ProjectSelect
+              selectedProject={selectedProject}
+              setSelectedProject={setSelectedProject}
+            />
+          </span>
         </div>
         <div className={styles['clock-controls']}>
           <Clock timerArray={timerArray} />

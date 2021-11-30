@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Listbox, ListboxOption } from '@reach/listbox';
 import { useGetClients } from '../../hooks/useGetClients';
+import styles from './ClientsDropdown.module.css';
 
 interface Props {
   client: string;
@@ -13,7 +14,7 @@ const ClientsDropdown: FC<Props> = ({ client, setClient }) => {
   return (
     <>
       <Listbox
-        className='client-dropdown'
+        className={styles['client-dropdown']}
         aria-labelledby='client-dropdown'
         value={client}
         onChange={setClient}

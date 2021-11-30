@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.project-form-modal {
+  position: relative;
+  width: 20rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.project-form-modal h2 {
+  color: black;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
+  background-color: transparent;
+  border: unset;
+}

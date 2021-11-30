@@ -20,9 +20,10 @@
   justify-content: flex-end;
 }
 
-/* .EditableInput {
+.editable-input {
   flex-grow: 2;
 }
 .project-select {
+  z-index: 10000;
   flex-grow: 1;
-} */
+}

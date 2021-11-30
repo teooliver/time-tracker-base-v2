@@ -1,4 +1,4 @@
-:root{
+:root {
   --body-background: #262d31;
   --sidebar-brackground: #131c21;
   --sidebar-border: #3d3d3d;
@@ -11,7 +11,6 @@
   --white: #d8d9db;
   --links: #00af9c;
   --btn-primary: #00af9c;
-
 
   --min-app-width: 700px;
   --side-nav-bar-width: 11rem;

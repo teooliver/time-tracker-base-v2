@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useCreateClient } from '../../hooks/useCreateClient';
+import styles from './CreateClientForm.module.css';
 
 const CreateClientForm = () => {
   const [clientName, setClientName] = useState<string>('');
@@ -15,7 +16,10 @@ const CreateClientForm = () => {
   };
 
   return (
-    <form className='CreateClientForm' onSubmit={(e) => handleSubmit(e)}>
+    <form
+      className={styles['create-client-form']}
+      onSubmit={(e) => handleSubmit(e)}
+    >
       <div>
         <input
           placeholder='Client Name'

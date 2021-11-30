@@ -1,0 +1,56 @@
+.projects-table {
+  border-radius: 0px;
+  padding: 0px;
+  width: 100%;
+  border-top: medium none;
+  border-collapse: initial;
+  box-shadow: rgba(235, 231, 235, 0.5) 0px -1px 0px 0px inset;
+  table-layout: fixed;
+}
+
+.table-header {
+  vertical-align: initial;
+}
+
+.table-header tr th {
+  text-align: left;
+  height: 50px;
+  padding: 0px 10px;
+  padding-left: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  vertical-align: middle;
+  color: rgb(149, 137, 155);
+  cursor: default;
+  text-transform: uppercase;
+  box-shadow: rgba(235, 231, 235, 0.5) 0px -1px 0px 0px inset;
+}
+
+.table-body tr td {
+  height: 100%;
+  white-space: pre;
+  vertical-align: middle;
+  box-shadow: rgba(235, 231, 235, 0.5) 0px -1px 0px 0px inset;
+  line-height: normal;
+  min-width: 0px;
+  height: auto;
+  overflow: hidden;
+  padding: 10px;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
+.table-body tr td.client-name {
+  color: white;
+  text-overflow: ellipsis;
+}
+.table-body tr td div {
+  display: flex;
+  flex-direction: row;
+  -moz-box-align: center;
+  align-items: center;
+}
+
+.dot {
+  min-width: 24px;
+}

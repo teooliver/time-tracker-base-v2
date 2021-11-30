@@ -42,18 +42,15 @@ const CreateProjectForm = () => {
         <span className={styles['project-color']}></span>
       </div>
       <ClientsDropdown client={client} setClient={setClient} />
-      <input
+      {/* <input
         placeholder='Workspace'
         name='client'
         id='client'
         type='text'
         value={workspace}
         onChange={(e) => setWorkspace(e.target.value)}
-      />
-      <button
-        className={`${styles['btn']} ${styles['btn-primary']}`}
-        onClick={handleCreateProject}
-      >
+      /> */}
+      <button className='btn btn-primary' onClick={handleCreateProject}>
         Create Project
       </button>
     </form>

@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useGetProjects } from '../../hooks/useGetProjects';
 import { Dot } from '../icons/Dot';
 import { ISelectedProject } from '../TimeTracker/StopWatch/Stopwatch';
+import styles from './ProjectsDropDown.module.css';
 
 interface Props {
   setSelectedProject: React.Dispatch<React.SetStateAction<ISelectedProject>>;
@@ -20,15 +21,15 @@ const ProjectsDropDown: FC<Props> = ({
   };
 
   return (
-    <div className='ProjectsDown'>
+    <div className={styles['projects-drop']}>
       <input
-        className='projects-dropdown-search'
+        className={styles['projects-dropdown-search']}
         type='text'
         placeholder='Search Projects'
         data-testid='projects-dropdown'
       />
       <div
-        className='project-list-item'
+        className={styles['project-list-item']}
         onClick={() =>
           handleSelection({
             id: '',
@@ -44,12 +45,12 @@ const ProjectsDropDown: FC<Props> = ({
       {isSuccess &&
         projects?.map((client) => (
           <div key={client._id}>
-            <div className='client-name'>{client._id}</div>
+            <div className={styles['client-name']}>{client._id}</div>
             <ul>
               {client.projects.map((project) => (
                 <li
                   key={project._id}
-                  className='project-list-item'
+                  className={styles['project-list-item']}
                   style={{ color: project.color }}
                   onClick={() =>
                     handleSelection({

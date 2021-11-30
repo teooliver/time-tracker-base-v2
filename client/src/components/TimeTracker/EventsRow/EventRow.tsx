@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Dot } from '../../icons/Dot';
 import { Menu, MenuList, MenuButton, MenuItem } from '@reach/menu-button';
 import { IDbTask } from '../../../interfaces/task';
@@ -16,25 +16,35 @@ interface Props {
 }
 
 const EventRow: FC<Props> = ({ task }) => {
-  const deletePostMutation = useDeleteTask();
+  const [startDate, setStartDate] = useState(
+    task.initial_time ? new Date(task.initial_time) : null
+  );
 
+  const [endDate, setEndDate] = useState(
+    task.end_time ? new Date(task.end_time) : null
+  );
+
+  const deletePostMutation = useDeleteTask();
   const updateTaskMutation = useUpdateTask();
 
-  const endTime = new Date(task.end_time!).getTime();
-  const initialTime = new Date(task.initial_time!).getTime();
+  const endTime = new Date(endDate!).getTime();
+  const initialTime = new Date(startDate!).getTime();
 
   const timeInSeconds: number | null = Math.round(
     (endTime - initialTime) / 1000
   );
+
   const [hours, minutes, seconds] = calculateTimer(timeInSeconds);
 
   const handleStartDateChange = (date: Date) => {
     // TODO: DEBOUNCE MUTATE
+    setStartDate(date);
     updateTaskMutation.mutate({ ...task, initial_time: date });
   };
 
   const handleEndDateChange = (date: Date) => {
     // TODO: DEBOUNCE MUTATE
+    setEndDate(date);
     updateTaskMutation.mutate({ ...task, end_time: date });
   };
 
@@ -63,7 +73,7 @@ const EventRow: FC<Props> = ({ task }) => {
         <div className={styles['rigth-side']}>
           <span className={styles['date-picker']}>
             <DatePicker
-              selected={task.initial_time ? new Date(task.initial_time) : null}
+              selected={startDate}
               // @ts-ignore
               onChange={(date) => handleStartDateChange(date)}
               timeInputLabel='Time:'
@@ -75,7 +85,7 @@ const EventRow: FC<Props> = ({ task }) => {
           <span>-</span>
           <span className={styles['date-picker']}>
             <DatePicker
-              selected={task.end_time ? new Date(task.end_time) : null}
+              selected={endDate}
               // @ts-ignore
               onChange={(date) => handleEndDateChange(date)}
               timeInputLabel='Time:'

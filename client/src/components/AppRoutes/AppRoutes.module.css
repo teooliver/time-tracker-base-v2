@@ -1,4 +1,4 @@
 .AppRoutes {
   margin-left: var(--side-nav-bar-width);
-  min-width: var(--min-app-width);
+  max-width: calc(100wv - var(--side-nav-bar-width));
 }

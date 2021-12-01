@@ -11,16 +11,21 @@ export interface ProjectCreate {
 }
 
 const createProject = async (newProject: ProjectCreate) => {
-  const res = await fetch(`${API_URL}/projects`, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(newProject),
-  }).then((res) => res.json());
+  console.log('-----', JSON.stringify(newProject));
+  try {
+    const res = await fetch(`${API_URL}/projects`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newProject),
+    }).then((res) => res.json());
 
-  return res as IDbProject;
+    return res as IDbProject;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const useCreateProject = () => {

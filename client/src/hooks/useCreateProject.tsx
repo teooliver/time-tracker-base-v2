@@ -11,7 +11,6 @@ export interface ProjectCreate {
 }
 
 const createProject = async (newProject: ProjectCreate) => {
-  console.log('-----', JSON.stringify(newProject));
   try {
     const res = await fetch(`${API_URL}/projects`, {
       method: 'POST',

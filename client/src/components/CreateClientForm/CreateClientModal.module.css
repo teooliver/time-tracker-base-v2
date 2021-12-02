@@ -1,0 +1,29 @@
+.create-client-form input {
+  margin: 0.8rem 0;
+  width: 100%;
+  padding: 0.2rem;
+  font-size: 1rem;
+}
+
+.client-form-modal {
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.client-form-modal[data-reach-dialog-content] {
+  width: 35vw;
+}
+
+.client-form-modal h2 {
+  color: black;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
+  background-color: transparent;
+  border: unset;
+}

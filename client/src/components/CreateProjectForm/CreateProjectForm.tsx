@@ -6,6 +6,7 @@ import styles from './CreateProjectForm.module.css';
 const CreateProjectForm = () => {
   const [name, setName] = useState('');
   const [client, setClient] = useState('No Client');
+  const [workspace, setWorkspace] = useState('');
   const [project_color] = useState('white');
   const createProjectMutation = useCreateProject();
 
@@ -41,7 +42,14 @@ const CreateProjectForm = () => {
         <span className={styles['project-color']}></span>
       </div>
       <ClientsDropdown client={client} setClient={setClient} />
-
+      {/* <input
+        placeholder='Workspace'
+        name='client'
+        id='client'
+        type='text'
+        value={workspace}
+        onChange={(e) => setWorkspace(e.target.value)}
+      /> */}
       <button className='btn btn-primary' onClick={handleCreateProject}>
         Create Project
       </button>

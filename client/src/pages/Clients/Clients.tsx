@@ -1,7 +1,7 @@
 import { PlusCircle } from '../../components/icons/PlusCircle';
 import { useState } from 'react';
-import Dialog from '@reach/dialog';
-import CreateClientForm from '../../components/CreateClientForm/CreateClientForm';
+// import Dialog from '@reach/dialog';
+import CreateClientModal from '../../components/CreateClientForm/CreateClientModal';
 import ClientsList from '../../components/ClientsList/ClientsList';
 import styles from './Clients.module.css';
 
@@ -20,17 +20,8 @@ const Clients = () => {
           </i>
           Add Client
         </button>
-        <Dialog
-          className={styles['client-form-modal']}
-          isOpen={showDialog}
-          onDismiss={close}
-        >
-          <h2>Create New Client</h2>
-          <CreateClientForm />
-          <button className={styles['close-btn']} onClick={close}>
-            X
-          </button>
-        </Dialog>
+
+        <CreateClientModal showDialog={showDialog} close={close} />
       </header>
 
       <ClientsList />

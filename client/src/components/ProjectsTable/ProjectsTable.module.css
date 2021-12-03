@@ -40,7 +40,7 @@
   white-space: nowrap;
 }
 
-.table-body tr td.client-name {
+.client-name {
   color: white;
   text-overflow: ellipsis;
 }

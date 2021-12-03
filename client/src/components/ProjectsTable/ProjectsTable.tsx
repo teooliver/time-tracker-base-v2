@@ -35,7 +35,7 @@ const ProjectsTable = () => {
               client.projects.map((project) => (
                 <tr key={project._id}>
                   <td
-                    className='project-list-item'
+                    className={styles['project-list-item']}
                     style={{ color: project.color }}
                   >
                     <div>
@@ -43,7 +43,7 @@ const ProjectsTable = () => {
                       {project.name}
                     </div>
                   </td>
-                  <td className='client-name'>{client._id}</td>
+                  <td className={styles['client-name']}>{client._id}</td>
                   <td>-</td>
                   <td>-</td>
                 </tr>

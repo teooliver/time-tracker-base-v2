@@ -6,7 +6,6 @@ import styles from './CreateProjectForm.module.css';
 const CreateProjectForm = () => {
   const [name, setName] = useState('');
   const [client, setClient] = useState('No Client');
-  const [workspace, setWorkspace] = useState('');
   const [project_color] = useState('white');
   const createProjectMutation = useCreateProject();
 

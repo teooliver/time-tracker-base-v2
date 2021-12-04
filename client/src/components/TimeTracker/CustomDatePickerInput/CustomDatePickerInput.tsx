@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
+import styles from './CustomDatePickerInput.module.css';
 
 interface Props {
   value?: Date;
@@ -12,7 +13,7 @@ interface Props {
  */
 const CustomDatePickerInput: FC<Props> = ({ value, onClick }) => {
   return (
-    <button className='custom-datepicker-input' onClick={onClick}>
+    <button className={styles['custom-datepicker-input']} onClick={onClick}>
       {value}
     </button>
   );

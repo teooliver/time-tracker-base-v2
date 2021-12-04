@@ -23,6 +23,7 @@ const Projects = () => {
 
         <Dialog
           className={styles['project-form-modal']}
+          aria-label='project-client-form'
           isOpen={showDialog}
           onDismiss={close}
         >

@@ -19,6 +19,7 @@ const CreateClientModal = ({ showDialog, close }: any) => {
   return (
     <Dialog
       className={styles['client-form-modal']}
+      aria-label='create-client-form'
       isOpen={showDialog}
       onDismiss={close}
     >

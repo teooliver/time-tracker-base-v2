@@ -60,21 +60,6 @@
   display: inline-block;
 }
 
-.custom-datepicker-input {
-  background-color: transparent;
-  color: white;
-  border: unset;
-  width: fit-content;
-  margin: 0;
-  padding: 0.2rem;
-  font-size: 1rem;
-  border-radius: 0.2rem;
-}
-
-.custom-datepicker-input:hover {
-  background-color: #5c6577;
-}
-
 .rigth-side {
   position: absolute;
   background-color: var(--body-background);

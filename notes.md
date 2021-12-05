@@ -31,7 +31,7 @@ println!("DURATION {:?}", duration);
 - Extract Error handling functions to its own `lib`
 - Better return messages route success (instead of just 200);
 - Extract Routes to its own files
-- Pagination to GetAllTasks routes
+- Pagination to `Get All Tasks Grouped By Date` route, one page per week.
 
 # BUGS:
 

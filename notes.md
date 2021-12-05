@@ -29,6 +29,11 @@ println!("DURATION {:?}", duration);
 - Return json error messages from handlers.
 - Better Error handling
 - Extract Error handling functions to its own `lib`
-- Add `created_at` and `updated_at` to all Models
 - Better return messages route success (instead of just 200);
 - Extract Routes to its own files
+- Pagination to GetAllTasks routes
+
+# BUGS:
+
+- Deleting client or project doesn't address the referenced objects causing the app to totaly break.
+  Need to find a good strategy to deleting a client or project, probably going over all objects that references the delete field and delete the reference.

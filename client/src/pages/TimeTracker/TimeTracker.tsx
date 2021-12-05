@@ -1,4 +1,3 @@
-import React from 'react';
 import EventsTable from '../../components/TimeTracker/EventsTable/EventsTable';
 import Stopwatch from '../../components/TimeTracker/StopWatch/Stopwatch';
 

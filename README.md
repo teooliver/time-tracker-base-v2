@@ -1,6 +1,6 @@
 # Time Tracker Base (v2)
 
-A fullstack toggl/clockify like clone app.
+A fullstack time tracker app inspired by toggl/clockify.
 
 > The previous version of this app used Express/Mongoose (Typescript) in the backend. You can check it here:
 > https://github.com/teooliver/time-tracker-base

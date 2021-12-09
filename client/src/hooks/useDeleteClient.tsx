@@ -20,6 +20,7 @@ export const useDeleteClient = () => {
   const deleteClientMutation = useMutation(deleteClient, {
     onSuccess: () => {
       queryClient.invalidateQueries('clients');
+      queryClient.invalidateQueries('projects');
     },
   });
 

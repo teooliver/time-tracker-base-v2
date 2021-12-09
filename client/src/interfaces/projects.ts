@@ -14,12 +14,9 @@ export interface ProjectAfterAgregation {
 
 export interface IDbProject {
   _id: string;
-  name: string;
   client: string;
+  name: string;
   color: string;
-  estimate: String;
-  status: string;
-  company: string;
   created_at: Date;
   updated_at: Date;
 }

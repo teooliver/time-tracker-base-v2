@@ -32,6 +32,7 @@ println!("DURATION {:?}", duration);
 - Better return messages route success (instead of just 200);
 - Extract Routes to its own files
 - Pagination to `Get All Tasks Grouped By Date` route, one page per week.
+- Add Users
 - Add authentication and authorization
 - Add Archive option for Clients and Projects
 - Add Delete option for Clients and Projects

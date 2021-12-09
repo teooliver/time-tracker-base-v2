@@ -13,6 +13,8 @@ const ProjectsTable = () => {
     <div>Loading Projects</div>;
   }
 
+  console.log('PROjECTS', projects);
+
   return (
     <table className={styles['projects-table']}>
       <colgroup>

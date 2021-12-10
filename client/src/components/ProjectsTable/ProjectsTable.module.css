@@ -54,3 +54,19 @@
 .dot {
   min-width: 24px;
 }
+
+.close {
+  text-align: right;
+}
+
+/* .close span {
+  color: white;
+} */
+
+.trash-icon {
+  fill: white;
+}
+
+.trash-icon:hover {
+  fill: red;
+}

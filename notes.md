@@ -2,7 +2,7 @@
 
 ### Hot Reload:
 
-Runst cargo watch in terminal:
+Run cargo watch in terminal:
 
 ```rs
 cargo watch -x run
@@ -31,10 +31,11 @@ println!("DURATION {:?}", duration);
 - Extract Error handling functions to its own `lib`
 - Better return messages route success (instead of just 200);
 - Extract Routes to its own files
-- Pagination to `Get All Tasks Grouped By Date` route, one page per week.
+- Pagination to `Get All Tasks Grouped By Date` route, one page per week. `api/tasks?page=1&size=2`
 - Add Users
 - Add authentication and authorization
 - Add Archive option for Clients and Projects
 - Add Delete option for Clients and Projects
+- Dockerize frontend and backend.
 
 # BUGS:

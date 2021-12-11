@@ -26,6 +26,10 @@
   box-shadow: rgba(235, 231, 235, 0.5) 0px -1px 0px 0px inset;
 }
 
+.empty-cell {
+  color: white;
+}
+
 .table-body tr td {
   height: 100%;
   white-space: pre;
@@ -44,11 +48,18 @@
   color: white;
   text-overflow: ellipsis;
 }
-.table-body tr td div {
+
+.project-name {
   display: flex;
   flex-direction: row;
   -moz-box-align: center;
   align-items: center;
+}
+
+.project-name div {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .dot {
@@ -58,10 +69,6 @@
 .close {
   text-align: right;
 }
-
-/* .close span {
-  color: white;
-} */
 
 .trash-icon {
   fill: white;

@@ -19,11 +19,11 @@ const ProjectsTable = () => {
   return (
     <table className={styles['projects-table']}>
       <colgroup>
-        <col width='20%' />
-        <col width='20%' />
-        <col width='20%' />
-        <col width='20%' />
-        <col width='20%' />
+        <col width='24%' />
+        <col width='24%' />
+        <col width='12%' />
+        <col width='10%' />
+        <col width='10%' />
       </colgroup>
       <thead className={styles['table-header']}>
         <tr>
@@ -40,17 +40,15 @@ const ProjectsTable = () => {
               client.projects.map((project) => (
                 <tr key={project._id}>
                   <td
-                    className={styles['project-list-item']}
+                    className={styles['project-name']}
                     style={{ color: project.color }}
                   >
-                    <div>
-                      <Dot size='24' className={styles['dot']} />
-                      {project.name}
-                    </div>
+                    <Dot size='24' className={styles['dot']} />
+                    <div>{project.name}</div>
                   </td>
                   <td className={styles['client-name']}>{client._id}</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td className={styles['empty-cell']}>-</td>
+                  <td className={styles['empty-cell']}>-</td>
                   <td className={styles['close']}>
                     <span
                       onClick={() => deleteProjectMutation.mutate(project._id)}

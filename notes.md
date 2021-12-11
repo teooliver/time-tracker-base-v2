@@ -39,5 +39,7 @@ println!("DURATION {:?}", duration);
 
 # BUGS:
 
+- Creating Project without client doesnt work.
+
 - Deleting client or project doesn't address the referenced objects causing the app to totaly break.
   Need to find a good strategy to deleting a client or project, probably going over all objects that references the delete field and delete the reference.

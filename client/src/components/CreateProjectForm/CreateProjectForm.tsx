@@ -17,7 +17,7 @@ const CreateProjectForm = () => {
     const newProject: ProjectCreate = {
       name: name,
     };
-    if (client !== 'No Client' || client.length !== 0) {
+    if (client !== 'No Client' && client.length !== 0) {
       newProject.client = client;
     }
     if (project_color) {

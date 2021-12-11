@@ -2,7 +2,7 @@
 
 ### Hot Reload:
 
-Runst cargo watch in terminal:
+Run cargo watch in terminal:
 
 ```rs
 cargo watch -x run

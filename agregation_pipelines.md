@@ -50,6 +50,87 @@ This are some of the pipelines used in this project, you can copy and paste them
 
 ## Tasks Collection
 
-```js
+### get_tasks_grouped_by_date
 
+```js
+[
+  {
+    $lookup: {
+      from: 'projects',
+      localField: 'project',
+      foreignField: '_id',
+      as: 'project',
+    },
+  },
+  {
+    $lookup: {
+      from: 'clients',
+      localField: 'project.client',
+      foreignField: '_id',
+      as: 'client',
+    },
+  },
+  {
+    $project: {
+      _id: '$_id',
+      name: '$name',
+      initial_time: '$initial_time',
+      end_time: '$end_time',
+      project: {
+        $arrayElemAt: ['$project.name', 0],
+      },
+      project_color: {
+        $arrayElemAt: ['$project.color', 0],
+      },
+      client: {
+        $arrayElemAt: ['$client.name', 0],
+      },
+    },
+  },
+  {
+    $group: {
+      _id: {
+        $dateToString: {
+          format: '%Y-%m-%d',
+          date: '$initial_time',
+        },
+      },
+      tasks: {
+        $push: '$$ROOT',
+      },
+      total_time: {
+        $sum: {
+          $divide: [
+            {
+              $subtract: ['$end_time', '$initial_time'],
+            },
+            1000,
+          ],
+        },
+      },
+    },
+  },
+  {
+    $facet: {
+      total: [
+        {
+          $count: 'count',
+        },
+      ],
+      dates: [
+        {
+          $sort: {
+            _id: -1,
+          },
+        },
+        {
+          $skip: 3,
+        },
+        {
+          $limit: 2,
+        },
+      ],
+    },
+  },
+];
 ```

@@ -9,6 +9,7 @@ A fullstack time tracker app inspired by toggl/clockify.
 - Rust
 - Warp
 - Mongodb
+- Docker
 
 > The previous version of this app used Express/Mongoose (Typescript) in the backend. You can check it here:
 > https://github.com/teooliver/time-tracker-base
@@ -18,7 +19,7 @@ A fullstack time tracker app inspired by toggl/clockify.
 - Typescript
 - React
 
-This project uses MongoDB and provides a simple docker-compose.yml file to set it up in your system.
+> This project uses MongoDB and provides a simple docker-compose.yml file to set it up in your system.
 
 ## To use this project follow the steps:
 

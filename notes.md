@@ -25,9 +25,16 @@ println!("DURATION {:?}", duration);
 
 # TODO:
 
-- Create type for json errors.
-- Return json error messages from handlers.
-- Better Error handling
+#### Frontend
+
+- Redo all tests using jest and Cypress
+- Add MSW for mocking and intercepting calls
+- Add chart library and create the Reports page.
+- Add storybook and maybe storyshot testing using playwright?
+
+#### Backend
+
+- Create better types for json errors.
 - Extract Error handling functions to its own `lib`
 - Better return messages route success (instead of just 200);
 - Extract Routes to its own files

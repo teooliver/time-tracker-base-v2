@@ -31,7 +31,7 @@ This are some of the pipelines used in this project, you can copy and paste them
           {
             $arrayElemAt: ['$client_name.name', 0],
           },
-          'sfsd',
+          'No Client',
         ],
       },
       subprojects: '$subprojects',
@@ -112,7 +112,7 @@ This are some of the pipelines used in this project, you can copy and paste them
   },
   {
     $facet: {
-      total: [
+      details: [
         {
           $count: 'count',
         },

@@ -73,7 +73,17 @@
   background-color: var(--btn-primary);
 }
 
+.btn-navbar--add:hover {
+  background-color: var(--btn-primary-hover);
+  cursor: pointer;
+}
+
 .btn-navbar--remove {
   composes: btn-navbar;
-  background-color: lightcoral;
+  background-color: var(--btn-alert);
+}
+
+.btn-navbar--remove:hover {
+  background-color: var(--btn-alert-hover);
+  cursor: pointer;
 }

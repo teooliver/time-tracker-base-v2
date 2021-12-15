@@ -9,8 +9,20 @@ export interface IDbTask {
   end_time: Date | null;
 }
 
-export interface GroupedTasks {
+export interface TaskGroupDates {
   _id: string;
   tasks: IDbTask[];
   total_time: number;
+}
+
+export interface TaskAfterGroupedResult {
+  results: TaskGroupDates[];
+  pagination: {
+    previous: string | null;
+    next: string | null;
+    total_pages: number;
+    total_items: number;
+    size: number;
+    start: number;
+  };
 }

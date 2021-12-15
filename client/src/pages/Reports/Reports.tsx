@@ -13,7 +13,7 @@ const Reports = () => {
   return (
     <div>
       <div>
-        {groupedTasks?.map((x) => {
+        {groupedTasks?.results.map((x) => {
           const [hours, minutes, seconds] = calculateTimer(
             Math.round(x.total_time)
           );

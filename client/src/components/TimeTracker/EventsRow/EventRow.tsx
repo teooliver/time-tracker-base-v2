@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Dot } from '../../icons/Dot';
 import { Menu, MenuList, MenuButton, MenuItem } from '@reach/menu-button';
-import { IDbTask } from '../../../interfaces/task';
+import { IDbTask } from '../../../types/task';
 import { calculateTimer } from '../../../utils/timer';
 import { ThreeDotsVertical } from '../../icons/ThreeDotsVertical';
 import DatePicker from 'react-datepicker';

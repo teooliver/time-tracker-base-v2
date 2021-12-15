@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from 'react-query';
-import { IDbProject } from '../interfaces/projects';
+import { IDbProject } from '../types/projects';
 import { API_URL } from '../utils/api-client';
 
 export interface ProjectCreate {

@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from 'react-query';
-import { IDbTask } from '../interfaces/task';
+import { IDbTask } from '../types/task';
 import { API_URL } from '../utils/api-client';
 
 const updateTask = async (task: Partial<IDbTask>) => {

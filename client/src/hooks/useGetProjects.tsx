@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import { ProjectsGroupByClient } from '../interfaces/projects';
+import { ProjectsGroupByClient } from '../types/projects';
 import { API_URL } from '../utils/api-client';
 
 const getProjects = async () => {

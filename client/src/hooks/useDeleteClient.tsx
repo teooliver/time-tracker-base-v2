@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from 'react-query';
-import { IClient } from '../interfaces/clients';
+import { IClient } from '../types/clients';
 import { API_URL } from '../utils/api-client';
 
 const deleteClient = async (id: string) => {

@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import { IClient } from '../interfaces/clients';
+import { IClient } from '../types/clients';
 import { API_URL } from '../utils/api-client';
 
 const getClients = async () => {

@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import { TaskAfterGroupedResult } from '../interfaces/task';
+import { TaskAfterGroupedResult } from '../types/task';
 import { API_URL } from '../utils/api-client';
 
 const getTasksGroupedByDate = async () => {

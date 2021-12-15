@@ -47,6 +47,11 @@ h2 {
   background-color: var(--btn-primary);
 }
 
+.btn-primary:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
 .bold {
   font-weight: bolder;
 }

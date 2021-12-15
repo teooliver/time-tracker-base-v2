@@ -27,3 +27,7 @@
   padding-right: 1rem;
   margin-bottom: 0.3rem;
 }
+
+.load-more button {
+  margin: 1rem auto;
+}

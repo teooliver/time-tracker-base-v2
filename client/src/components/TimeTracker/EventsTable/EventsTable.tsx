@@ -36,12 +36,15 @@ const EventsTable = () => {
                   <EventRow key={task._id} task={task} />
                 ))}
               </ul>
-              <div className={styles['load-more']}>
-                <button className='btn btn-primary'>Load More</button>
-              </div>
             </>
           );
         })}
+
+      {isSuccess && (
+        <div className={styles['load-more']}>
+          <button className='btn btn-primary'>Load More</button>
+        </div>
+      )}
 
       {isError && (
         <div>

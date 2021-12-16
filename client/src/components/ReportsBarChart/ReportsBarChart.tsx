@@ -1,17 +1,24 @@
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-export const ReportsBarChart = ({ chartData }: any) => {
-  const config = {
-    type: 'bar',
-    data: chartData,
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
-      },
-    },
-  };
 
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+export const ReportsBarChart = ({ chartData }: any) => {
   return (
     <Bar
       data={chartData}
@@ -19,7 +26,7 @@ export const ReportsBarChart = ({ chartData }: any) => {
         plugins: {
           title: {
             display: true,
-            text: 'Cryptocurrency prices',
+            text: 'Work Hours',
           },
           legend: {
             display: true,

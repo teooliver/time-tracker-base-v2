@@ -23,6 +23,10 @@ println!("DURATION {:?}", duration);
     println!("{:?}", initial_time.to_string());
 ```
 
+### Implement default traits for structs when needed:
+
+> https://doc.rust-lang.org/std/default/trait.Default.html
+
 # TODO:
 
 #### Frontend

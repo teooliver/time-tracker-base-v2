@@ -11,7 +11,6 @@ const Reports = () => {
   } = useGetGroupedTasks();
 
   let chartData = {
-    // labels: data.data.map((crypto) => crypto.name),
     labels: groupedTasks?.results.map((result) => result._id),
     datasets: [
       {

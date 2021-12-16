@@ -1,6 +1,7 @@
 import { ReportsBarChart } from '../../components/ReportsBarChart/ReportsBarChart';
 import { useGetGroupedTasks } from '../../hooks/useGetGroupedTasks';
 import { PROJECT_COLORS } from '../../utils/projectColors';
+import styles from './Reports.module.css';
 import { calculateTimer } from '../../utils/timer';
 
 const Reports = () => {
@@ -21,7 +22,11 @@ const Reports = () => {
       },
     ],
   };
-  return <ReportsBarChart chartData={chartData} />;
+  return (
+    <div className={styles['chart-container']}>
+      <ReportsBarChart chartData={chartData} />;
+    </div>
+  );
 };
 
 export default Reports;

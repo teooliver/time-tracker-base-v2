@@ -13,11 +13,15 @@ const Reports = () => {
   } = useGetGroupedTasks();
 
   let chartData = {
+    // Add day of the week next to date
     labels: groupedTasks?.results.map((result) => result._id),
     datasets: [
       {
-        label: 'Hours per day',
-        data: groupedTasks?.results.map((result) => result.total_time),
+        label: 'Hours X days',
+        data: groupedTasks?.results.map((result) => {
+          let [hours] = calculateTimer(result.total_time);
+          return hours;
+        }),
         backgroundColor: [...PROJECT_COLORS],
       },
     ],

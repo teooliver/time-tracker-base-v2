@@ -36,6 +36,7 @@ println!("DURATION {:?}", duration);
 - Add chart library and create the Reports page.
 - Add storybook and maybe storyshot testing using playwright?
 - Add pagination to Reports chart.
+- Add Spinner for loading states.
 
 #### Backend
 

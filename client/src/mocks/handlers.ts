@@ -5,7 +5,7 @@ import { getGroupedTasksRes } from './data/getGroupedTasksRes';
 import { getProjectsRes } from './data/getProjectsRes';
 
 export const handlers = [
-  rest.get(`${API_URL}/projects`, (req, res, ctx) => {
+  rest.get(`${API_URL}/projects`, (_req, res, ctx) => {
     return res(
       ctx.status(200),
 
@@ -13,7 +13,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${API_URL}/clients`, (req, res, ctx) => {
+  rest.get(`${API_URL}/clients`, (_req, res, ctx) => {
     return res(
       ctx.status(200),
 
@@ -21,7 +21,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${API_URL}/tasks/group`, (req, res, ctx) => {
+  rest.get(`${API_URL}/tasks/group`, (_req, res, ctx) => {
     return res(
       ctx.status(200),
 

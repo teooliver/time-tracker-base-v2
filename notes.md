@@ -35,6 +35,7 @@ println!("DURATION {:?}", duration);
 - Add MSW for mocking and intercepting calls
 - Add chart library and create the Reports page.
 - Add storybook and maybe storyshot testing using playwright?
+- Add pagination to Reports chart.
 
 #### Backend
 

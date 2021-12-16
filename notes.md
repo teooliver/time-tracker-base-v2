@@ -51,4 +51,13 @@ println!("DURATION {:?}", duration);
 - Add Delete option for Clients and Projects
 - Dockerize frontend and backend.
 
-# BUGS:
+# IMPORTANT INTEGRATION TESTS
+
+- Add Task
+- Edit Task
+- Add Project
+- Delete Project
+- Add Client
+- Delete Client
+
+# KNOWN BUGS:

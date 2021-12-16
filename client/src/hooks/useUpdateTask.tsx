@@ -9,8 +9,6 @@ const updateTask = async (task: Partial<IDbTask>) => {
     end_time: task.end_time,
   };
 
-  console.log('===== Task =====', editable_fields);
-  console.log('===== TaskID =====', task._id);
   const res = await fetch(`${API_URL}/tasks/${task._id}`, {
     method: 'PUT',
     headers: {

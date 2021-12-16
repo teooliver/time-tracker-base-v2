@@ -31,12 +31,14 @@ println!("DURATION {:?}", duration);
 
 #### Frontend
 
-- Redo all tests using jest and Cypress
-- Add MSW for mocking and intercepting calls
-- Add chart library and create the Reports page.
+- Implement `load more` in Timer page using `useInfiniteQuery`.
+- Redo all tests using jest and Cypress with MSW.
 - Add storybook and maybe storyshot testing using playwright?
-- Add pagination to Reports chart.
+- Add pagination to Reports chart (choose spefic start/end dates or previous/next week buttons).
 - Add Spinner for loading states.
+
+- Add modal asking the user if its first the first time in the app.
+  Setup cookies to show/hide cookie base on user response. Good for writing diferent types of tests based on cookies.
 
 #### Backend
 
@@ -59,5 +61,7 @@ println!("DURATION {:?}", duration);
 - Delete Project
 - Add Client
 - Delete Client
+
+- Whole user journey from seeding tasks, create tasks, projects and clients, check Charts and so on.
 
 # KNOWN BUGS:

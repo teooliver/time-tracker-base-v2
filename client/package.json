@@ -7,7 +7,6 @@
     "@reach/listbox": "^0.16.2",
     "@reach/menu-button": "^0.16.2",
     "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
@@ -49,6 +48,8 @@
     ]
   },
   "devDependencies": {
-    "@types/react-datepicker": "^4.3.2"
+    "@testing-library/react": "^12.1.2",
+    "@types/react-datepicker": "^4.3.2",
+    "msw": "^0.36.3"
   }
 }

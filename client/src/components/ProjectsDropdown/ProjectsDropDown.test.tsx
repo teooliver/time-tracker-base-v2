@@ -44,8 +44,8 @@ describe('Test ProjectsDropDown Component', () => {
     fireEvent.click(dropdown);
 
     await waitFor(() => {
-      expect(getByText('Project Test 1')).toBeInTheDocument();
-      expect(getByText('Project Test 2')).toBeInTheDocument();
+      expect(getByText('Koepp and Bogisich Group')).toBeInTheDocument();
+      expect(getByText('Legros Group')).toBeInTheDocument();
     });
 
     expect(getAllByText('No Project')).toBeTruthy();

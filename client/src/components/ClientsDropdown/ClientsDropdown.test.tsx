@@ -32,8 +32,8 @@ describe('Test ClientsDropdown Component', () => {
     fireEvent.click(dropdown);
 
     await waitFor(() => {
-      expect(getByText('Test Client 1')).toBeInTheDocument();
-      expect(getByText('Test Client 2')).toBeInTheDocument();
+      expect(getByText('Ritchie and Sons')).toBeInTheDocument();
+      expect(getByText('Beatty and Cartwright Group')).toBeInTheDocument();
     });
 
     expect(getAllByText('No Client')).toBeTruthy();

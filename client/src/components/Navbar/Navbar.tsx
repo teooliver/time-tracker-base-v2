@@ -37,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={styles['navbar']}>
+    <div className={styles['navbar']} data-testid='navbar'>
       <div className={styles['logo']}>
         <span className='bold'>Time</span>
         <span>Track</span>

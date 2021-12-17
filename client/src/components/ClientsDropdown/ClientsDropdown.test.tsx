@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { cleanup, render, fireEvent, waitFor } from '@testing-library/react';
 import ClientsDropdown from './ClientsDropdown';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { useGetClients } from '../../hooks/useGetClients';
-import { getClientRes } from '../../mocks/data/getClientsRes';
 import { server } from '../../mocks/server';
 import { rest } from 'msw';
 
@@ -16,6 +14,25 @@ const queryClient = new QueryClient({
     },
   },
 });
+
+// jest.mock('../../hooks/useGetClients', () => ({
+//   useGetClients: () => ({
+//     data: [
+//       {
+//         _id: '61bb3d2fc19459596babf595',
+//         name: 'Projectq 1',
+//         created_at: '2021-12-16T13:20:47.250+00:00',
+//         updated_at: '2021-12-16T13:20:47.250+00:00',
+//       },
+//       {
+//         _id: '61bb3d2fc19459596babf596',
+//         name: 'Project 2',
+//         created_at: '2021-12-16T13:20:47.250+00:00',
+//         updated_at: '2021-12-16T13:20:47.250+00:00',
+//       },
+//     ],
+//   }),
+// }));
 
 describe('Test ClientsDropdown Component', () => {
   test('Render ClientsDropdown', async () => {
@@ -44,24 +61,6 @@ describe('Test ClientsDropdown Component', () => {
   });
 });
 
-// jest.mock('../../hooks/useGetClients', () => ({
-//   useGetClients: () => ({
-//     data: [
-//       {
-//         _id: '61bb3d2fc19459596babf595',
-//         name: 'Projectq 1',
-//         created_at: '2021-12-16T13:20:47.250+00:00',
-//         updated_at: '2021-12-16T13:20:47.250+00:00',
-//       },
-//       {
-//         _id: '61bb3d2fc19459596babf596',
-//         name: 'Project 2',
-//         created_at: '2021-12-16T13:20:47.250+00:00',
-//         updated_at: '2021-12-16T13:20:47.250+00:00',
-//       },
-//     ],
-//   }),
-// }));
 describe('Check Manual Mockups', () => {
   test('Check if manual Mock still works', async () => {
     server.use(
@@ -71,7 +70,7 @@ describe('Check Manual Mockups', () => {
           ctx.json([
             {
               _id: '61bb3d2fc19459596babf595',
-              name: 'Projectq 1',
+              name: 'Project 1',
               created_at: '2021-12-16T13:20:47.250+00:00',
               updated_at: '2021-12-16T13:20:47.250+00:00',
             },
@@ -103,7 +102,7 @@ describe('Check Manual Mockups', () => {
     fireEvent.click(dropdown);
 
     await waitFor(() => {
-      expect(getByText('Projectq 1')).toBeInTheDocument();
+      expect(getByText('Project 1')).toBeInTheDocument();
       expect(getByText('Project 2')).toBeInTheDocument();
     });
 

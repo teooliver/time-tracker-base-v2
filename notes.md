@@ -39,6 +39,7 @@ println!("DURATION {:?}", duration);
 - Add modal asking the user if its first the first time in the app.
   Setup cookies to show/hide cookie base on user response. Good for writing diferent types of tests based on cookies.
 - Should I keep using MSW or just mock fetch requests as normal?
+- Extract Wrapper component in tests to jest config
 
 #### Backend
 

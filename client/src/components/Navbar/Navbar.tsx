@@ -49,8 +49,6 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? styles['active-link'] : ''
             }
-            // activeClassName='active-link'
-            // exact
             to='/'
           >
             <span>

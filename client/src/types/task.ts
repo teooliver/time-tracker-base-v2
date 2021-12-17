@@ -20,6 +20,8 @@ export interface TaskAfterGroupedResult {
   pagination: {
     previous: string | null;
     next: string | null;
+    next_page: number;
+    previous_page: number;
     total_pages: number;
     total_items: number;
     size: number;

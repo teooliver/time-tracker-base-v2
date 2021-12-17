@@ -10,7 +10,7 @@ const getInifiniteTasks = async ({ pageParam = 1 }) => {
 };
 
 export const useGetInifiniteTasks = () => {
-  return useInfiniteQuery('tasks_inifinite', getInifiniteTasks, {
+  return useInfiniteQuery('infinite-tasks', getInifiniteTasks, {
     getNextPageParam: (lastPage, _allPages) => {
       if (lastPage.pagination.next_page) {
         return lastPage.pagination.next_page;

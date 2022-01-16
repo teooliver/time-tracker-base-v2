@@ -53,6 +53,10 @@ println!("DURATION {:?}", duration);
 - Add Archive option for Clients and Projects
 - Add Delete option for Clients and Projects
 - Dockerize frontend and backend.
+- Better Error handling in general:
+- - BodyDeserializeError
+- - CorsForbidden
+- - UNPROCESSABLE_ENTITY (invalid ID for example)
 
 # IMPORTANT INTEGRATION TESTS
 

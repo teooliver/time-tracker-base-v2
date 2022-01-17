@@ -58,6 +58,8 @@ println!("DURATION {:?}", duration);
 - - CorsForbidden
 - - UNPROCESSABLE_ENTITY (invalid ID for example)
 
+- Add filter requests based on headers (for example team names) so we can log and understand from where and how the requests are being done.
+
 # IMPORTANT INTEGRATION TESTS
 
 - Add Task

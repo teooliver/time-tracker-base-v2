@@ -60,6 +60,7 @@ println!("DURATION {:?}", duration);
 
 - Add filter requests based on headers (for example team names) so we can log and understand from where and how the requests are being done.
 - Add health_check route
+- Add tracing to all routes
 
 # IMPORTANT INTEGRATION TESTS
 

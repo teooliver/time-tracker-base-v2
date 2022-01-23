@@ -43,6 +43,7 @@ println!("DURATION {:?}", duration);
 
 #### Backend
 
+- Move routes in main to their own files
 - Create better types for json errors.
 - Extract Error handling functions to its own `lib`
 - Better return messages route success (instead of just 200);

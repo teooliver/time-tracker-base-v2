@@ -1,6 +1,7 @@
 import { useDeleteClient } from '../../hooks/useDeleteClient';
 import { useGetClients } from '../../hooks/useGetClients';
 import { XCircle } from '../icons/XCircle';
+import Spinner from '../Spinner/Spinner';
 import styles from './ClientsList.module.css';
 
 const ClientsList = () => {
@@ -8,7 +9,7 @@ const ClientsList = () => {
   const deleteClientMutation = useDeleteClient();
 
   if (isLoading) {
-    <div>Loading</div>;
+    return <Spinner />;
   }
 
   return (

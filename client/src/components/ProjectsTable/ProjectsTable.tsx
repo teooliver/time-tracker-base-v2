@@ -2,6 +2,7 @@ import { useDeleteProject } from '../../hooks/useDeleteProject';
 import { useGetProjects } from '../../hooks/useGetProjects';
 import { Dot } from '../icons/Dot';
 import { Trash } from '../icons/Trash';
+import Spinner from '../Spinner/Spinner';
 import styles from './ProjectsTable.module.css';
 
 const ProjectsTable = () => {
@@ -9,11 +10,11 @@ const ProjectsTable = () => {
   const deleteProjectMutation = useDeleteProject();
 
   if (isError) {
-    <div>No projects available</div>;
+    return <div>No projects available</div>;
   }
 
   if (isLoading) {
-    <div>Loading Projects</div>;
+    return <Spinner />;
   }
 
   return (

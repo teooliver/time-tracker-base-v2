@@ -3,6 +3,7 @@ import { calculateTimer } from '../../../utils/timer';
 import EventRow from '../EventsRow/EventRow';
 import styles from './EventsTable.module.css';
 import { useGetInifiniteTasks } from '../../../hooks/useGetInifiniteTasks';
+import Spinner from '../../Spinner/Spinner';
 
 // TODO: ADD NEXT PAGE WHEN CLICKING LOAD MORE
 
@@ -19,7 +20,7 @@ const EventsTable = () => {
 
   return (
     <>
-      {isLoading && <div>Loading</div>}
+      {isLoading && <Spinner />}
 
       {isSuccess &&
         data?.pages.map((groupedTasks) =>
@@ -59,7 +60,9 @@ const EventsTable = () => {
 
       {isError && (
         <div>
-          <p>No Data Available</p>
+          <p style={{ color: 'white', marginLeft: '1rem' }}>
+            No Data Available
+          </p>
         </div>
       )}
     </>

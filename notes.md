@@ -43,6 +43,8 @@ println!("DURATION {:?}", duration);
 
 #### Backend
 
+- Refactor project into a library and a binary so its easier to run non blackbox tests.
+
 - Move routes in main to their own files
 - Create better types for json errors.
 - Extract Error handling functions to its own `lib`

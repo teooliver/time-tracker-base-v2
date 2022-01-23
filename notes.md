@@ -31,7 +31,7 @@ println!("DURATION {:?}", duration);
 
 #### Frontend
 
-- Implement `load more` in Timer page using `useInfiniteQuery`.
+- ~~Implement `load more` in Timer page using `useInfiniteQuery`~~.
 - Redo all tests using jest and Cypress with MSW.
 - Add storybook and maybe storyshot testing using playwright?
 - Add pagination to Reports chart (choose spefic start/end dates or previous/next week buttons).
@@ -64,6 +64,8 @@ println!("DURATION {:?}", duration);
 - Add filter requests based on headers (for example team names) so we can log and understand from where and how the requests are being done.
 - Add health_check route
 - Add tracing to all routes
+
+- Limit fake events data to maximum of `8 hours a day`. (Good challenge)
 
 # IMPORTANT INTEGRATION TESTS
 

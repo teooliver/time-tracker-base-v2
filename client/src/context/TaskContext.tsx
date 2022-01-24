@@ -16,6 +16,7 @@ export const TaskContext = createContext<TaskContextDefaults>({
   task: defaultTask,
   setTask: () => {},
 });
+TaskContext.displayName = 'TaskContext';
 
 const TaskProvider = (props: any) => {
   const [task, setTask] = useState<TaskCreate>(defaultTask);

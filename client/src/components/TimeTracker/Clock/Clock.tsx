@@ -5,14 +5,15 @@ export interface ClockProps {
   timerArray: (string | number)[];
 }
 
+// TODO: Refactor this components, use <span/> instead of <p/>
 export const Clock: FC<ClockProps> = ({ timerArray }) => {
   return (
     <section className={styles['clock']}>
-      <p className={styles['time-text']}>{timerArray[0]}</p>
+      <span className={styles['time-text']}>{timerArray[0]}</span>
       <span>:</span>
-      <p className={styles['time-text']}>{timerArray[1]}</p>
+      <span className={styles['time-text']}>{timerArray[1]}</span>
       <span>:</span>
-      <p className={styles['time-text']}>{timerArray[2]}</p>
+      <span className={styles['time-text']}>{timerArray[2]}</span>
     </section>
   );
 };

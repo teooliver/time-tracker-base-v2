@@ -3,6 +3,7 @@ import { useGetGroupedTasks } from '../../hooks/useGetGroupedTasks';
 import { PROJECT_COLORS } from '../../utils/projectColors';
 import styles from './Reports.module.css';
 import { calculateTimer } from '../../utils/timer';
+import Spinner from '../../components/Spinner/Spinner';
 
 const Reports = () => {
   const {
@@ -10,7 +11,7 @@ const Reports = () => {
     isLoading,
     isSuccess,
     isError,
-  } = useGetGroupedTasks();
+  } = useGetGroupedTasks(7);
 
   let chartData = {
     // Add day of the week next to date
@@ -26,6 +27,11 @@ const Reports = () => {
       },
     ],
   };
+
+  if (isLoading) {
+    return <Spinner />;
+  }
+
   return (
     <div className={styles['chart-container']}>
       <ReportsBarChart chartData={chartData} />;

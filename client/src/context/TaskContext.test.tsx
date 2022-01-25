@@ -1,7 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { ReactElement, useContext } from 'react';
-import TimeTracker from '../pages/TimeTracker/TimeTracker';
-import TaskProvider, { TaskContext } from './TaskContext';
+import { TaskContext } from './TaskContext';
 
 /**
  * A custom render to setup providers. Extends regular
@@ -16,13 +14,6 @@ const customRender = (ui: any, { providerProps, ...renderOptions }: any) => {
     renderOptions
   );
 };
-
-// test('NameConsumer shows value from provider', () => {
-//   customRender(<TimeTracker />, {});
-//   expect(screen.getByText(/^My Name Is:/)).toHaveTextContent(
-//     'My Name Is: C3P0'
-//   );
-// });
 
 /**
  * To test a component that provides a context value, render a matching
@@ -61,20 +52,3 @@ test('NameProvider composes full name from first, last', () => {
     'Received initial_time: 2022-01-24T22:15:00.006Z'
   );
 });
-
-/**
- * A tree containing both a providers and consumer can be rendered normally
- */
-
-// test('NameProvider/Consumer shows name of character', () => {
-//   const wrapper = ({ children }) => (
-//     <NameProvider first='Leia' last='Organa'>
-//       {children}
-//     </NameProvider>
-//   );
-
-//   render(<NameConsumer />, { wrapper });
-//   expect(screen.getByText(/^My Name Is:/).textContent).toBe(
-//     'My Name Is: Leia Organa'
-//   );
-// });

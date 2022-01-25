@@ -7,15 +7,16 @@ import { XCircle } from '../../icons/XCircle';
 import { ISelectedProject } from '../StopWatch/Stopwatch';
 import styles from './ClockControls.module.css';
 
+// TODO: recieve only projectId instead of the whole project object
 interface ControlsProps {
   setTimeInSeconds: Function;
-  timeInSeconds: number;
+  // timeInSeconds: number;
   selectedProject: ISelectedProject;
 }
 
 export const ClockControls: FC<ControlsProps> = ({
   setTimeInSeconds,
-  timeInSeconds,
+  // timeInSeconds,
   selectedProject,
 }) => {
   const [intervalId, setIntervalId] = useState<number>(0);
@@ -53,15 +54,15 @@ export const ClockControls: FC<ControlsProps> = ({
   return (
     <div className={styles.Controls}>
       {isPlaying ? (
-        <button onClick={handleStopButton}>
+        <button onClick={handleStopButton} data-testid='stop-button'>
           <StopCircle className={styles['stop-btn']} size='32' />
         </button>
       ) : (
-        <button onClick={handlePlayButton}>
+        <button onClick={handlePlayButton} data-testid='play-button'>
           <PlayCircle className={styles['play-btn']} size='32' />
         </button>
       )}
-      <button onClick={handleResetButton}>
+      <button onClick={handleResetButton} data-testid='reset-button'>
         <XCircle className={styles['reset-btn']} size='32' />
       </button>
     </div>

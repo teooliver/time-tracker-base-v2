@@ -5,7 +5,6 @@ export interface ClockProps {
   timerArray: (string | number)[];
 }
 
-// TODO: Refactor this components, use <span/> instead of <p/>
 export const Clock: FC<ClockProps> = ({ timerArray }) => {
   return (
     <section className={styles['clock']}>

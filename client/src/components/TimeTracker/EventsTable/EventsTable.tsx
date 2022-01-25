@@ -5,8 +5,6 @@ import styles from './EventsTable.module.css';
 import { useGetInifiniteTasks } from '../../../hooks/useGetInifiniteTasks';
 import Spinner from '../../Spinner/Spinner';
 
-// TODO: ADD NEXT PAGE WHEN CLICKING LOAD MORE
-
 const EventsTable = () => {
   const {
     data,

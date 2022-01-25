@@ -47,7 +47,7 @@ const Stopwatch = () => {
 
           <ClockControls
             setTimeInSeconds={setTimeInSeconds}
-            timeInSeconds={timeInSeconds}
+            // timeInSeconds={timeInSeconds}
             selectedProject={selectedProject}
           />
         </div>

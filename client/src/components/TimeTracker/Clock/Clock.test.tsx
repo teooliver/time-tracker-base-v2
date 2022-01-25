@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { Clock } from './Clock';
 
 describe('Test Clock Component', () => {
-  test('Render Clock ', async () => {
+  test('Render Clock', async () => {
     const { getByText, getAllByText } = render(
       <Clock timerArray={[13, 53, 20]} />
     );

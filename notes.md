@@ -31,6 +31,7 @@ println!("DURATION {:?}", duration);
 
 #### Frontend
 
+- Add tests to `ProjectSelect`, `ReportsBarChart` and `StopWatch`
 - ~~Implement `load more` in Timer page using `useInfiniteQuery`~~.
 - Redo all tests using jest and Cypress with MSW.
 - Add storybook and maybe storyshot testing using playwright?

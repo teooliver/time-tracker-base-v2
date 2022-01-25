@@ -6,12 +6,7 @@ import { calculateTimer } from '../../utils/timer';
 import Spinner from '../../components/Spinner/Spinner';
 
 const Reports = () => {
-  const {
-    data: groupedTasks,
-    isLoading,
-    isSuccess,
-    isError,
-  } = useGetGroupedTasks(7);
+  const { data: groupedTasks, isLoading } = useGetGroupedTasks(7);
 
   let chartData = {
     // Add day of the week next to date

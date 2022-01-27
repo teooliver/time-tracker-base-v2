@@ -68,6 +68,10 @@ println!("DURATION {:?}", duration);
 
 - Limit fake events data to maximum of `8 hours a day`. (Good challenge)
 
+#### Split repo into separate repos `frontend` and `backend`
+
+https://docs.github.com/en/get-started/using-git/splitting-a-subfolder-out-into-a-new-repository
+
 # IMPORTANT INTEGRATION TESTS
 
 - Add Task

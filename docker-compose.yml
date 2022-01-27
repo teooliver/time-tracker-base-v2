@@ -8,7 +8,7 @@ services:
       - mongodb:/data/db
     ports:
       - 27017:27017
-    profiles: ["backend"]
+    # profiles: ["backend"]
 
   # rust_server?
   # node_server:
@@ -39,6 +39,6 @@ services:
       - SKIP_PREFLIGHT_CHECK=true
     # depends_on:
     #   - node_server
-    profiles: ["frontend"]
+    # profiles: ["frontend"]
 volumes:
   mongodb:

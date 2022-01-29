@@ -10,6 +10,7 @@ import { test, expect } from '@playwright/test';
 
 test('snapshot test', async ({ page }) => {
   test.slow();
+  // TODO: Set a base url for tests
   await page.goto('http://192.168.0.48:3000/reports');
   await page.waitForSelector('#chart-container');
   expect(await page.screenshot()).toMatchSnapshot('landing.png');

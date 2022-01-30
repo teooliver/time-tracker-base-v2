@@ -12,6 +12,14 @@ import '@reach/dialog/styles.css';
 
 const queryClient = new QueryClient();
 
+console.log('======> NODE_ENV', process.env.NODE_ENV);
+
+if (process.env.NODE_ENV === 'development') {
+  const { worker } = require('./mocks/browser');
+
+  worker.start();
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>

@@ -4,7 +4,7 @@ import { PlaywrightTestConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 const config: PlaywrightTestConfig = {
-  testDir: './e2e',
+  testDir: '.',
   snapshotDir: './e2e/snapshots',
   testMatch: /.*.e2e.(test|spec)\.(js|ts|mjs|)/,
 
@@ -101,9 +101,9 @@ const config: PlaywrightTestConfig = {
   outputDir: './e2e/test-results/',
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   port: 3000,
-  // },
+  webServer: {
+    command: 'REACT_APP_ENV=test npm run start',
+    port: 3000,
+  },
 };
 export default config;

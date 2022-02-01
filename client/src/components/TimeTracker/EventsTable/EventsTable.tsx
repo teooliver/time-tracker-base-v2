@@ -28,7 +28,11 @@ const EventsTable = () => {
             );
             return (
               <>
-                <ul className={styles['EventsTable']} key={group._id}>
+                <ul
+                  className={styles['EventsTable']}
+                  key={group._id}
+                  data-testid='events-table'
+                >
                   <li className={styles['date-header']}>
                     <span>{format(new Date(group._id), 'EEE, dd LLL')}</span>
                     <span className={styles['day-total']}>

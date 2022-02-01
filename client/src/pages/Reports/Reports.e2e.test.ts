@@ -4,6 +4,6 @@ test('Reports page snapshot test', async ({ page }) => {
   test.slow();
   // TODO: Set a base url for tests
   await page.goto('http://localhost:3000/reports');
-  await page.waitForSelector('#chart-container');
-  expect(await page.screenshot()).toMatchSnapshot('reports-page.png.png');
+  await page.waitForSelector('[data-testid=chart-container]');
+  expect(await page.screenshot()).toMatchSnapshot('reports-page.png');
 });

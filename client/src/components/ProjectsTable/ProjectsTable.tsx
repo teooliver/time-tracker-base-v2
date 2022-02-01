@@ -18,7 +18,7 @@ const ProjectsTable = () => {
   }
 
   return (
-    <table className={styles['projects-table']}>
+    <table className={styles['projects-table']} data-testid='projects-table'>
       <colgroup>
         <col width='24%' />
         <col width='24%' />

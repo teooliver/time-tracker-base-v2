@@ -28,11 +28,7 @@ const Reports = () => {
   }
 
   return (
-    <div
-      className={styles['chart-container']}
-      data-testid='chart-container'
-      id='chart-container'
-    >
+    <div className={styles['chart-container']} data-testid='chart-container'>
       <ReportsBarChart chartData={chartData} />;
     </div>
   );

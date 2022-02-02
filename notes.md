@@ -34,6 +34,7 @@ println!("DURATION {:?}", duration);
 - Add tests to `ProjectSelect` and `StopWatch`
 - Add add mockup backend test implementation so we can use the app without the backend and run tests.
 - Add storybook and maybe storyshot testing using playwright?
+- Add `husky` end configure git hooks for commits, merge and push
 
 - Redo all tests using jest and Playwright with MSW.
 - Add pagination to Reports chart (choose spefic start/end dates or previous/next week buttons).

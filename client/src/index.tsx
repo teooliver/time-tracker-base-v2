@@ -8,7 +8,6 @@ import { BrowserRouter } from 'react-router-dom';
 import 'react-datepicker/dist/react-datepicker.css';
 import '@reach/listbox/styles.css';
 import '@reach/dialog/styles.css';
-// import './styles/styles.scss';
 
 const queryClient = new QueryClient();
 

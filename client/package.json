@@ -27,7 +27,8 @@
     "test:snapshot-update": "playwright test --update-snapshots",
     "clean:test:ports": "npx kill-port 3000",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "list:tests": "find . -type f -name '*.test.*' ! -path './node_modules/*'"
   },
   "eslintConfig": {
     "extends": [
